@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="../Images-All/4.svg" />
+    <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../Bootstrap/css/bootstrap.rtl.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../Css-All/Login-Styles.css">
+    <title>Login Page</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <!-- <div class="logo">G.G</div> -->
+                        <div class="logo">
+                            <img src="../Images-All/4.svg" alt="Logo">
+                        </div>
+                        <h3 class="card-title text-center">Welcome Back!</h3>
+                        <form id="loginForm">
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="email" placeholder="E-mail" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="password" placeholder="Password"
+                                    maxlength="25" required>
+
+                                <div id="passwordError" class="error-message">Incorrect password.</div>
+                                <div id="noAccount" class="error-message">No account found with this email. Please sign
+                                    up to create an account.</div>
+                            </div>
+
+                            <button type="submit" class="btn btn-praimary mt-3 enter"
+                                onclick="redirectToDashboard()">LOGIN</button>
+                        </form>
+                        <!-- Anchor for SignUp -->
+                        <div class="signup-link">
+                            Create New Account <a href="./Signup-index.html" class="signup-link-a">Sign Up</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Js files -->
+    <script src="../Bootstrap/js/bootstrap.min.js"></script>
+    <script src="../Bootstrap/js/popper.min.js"></script>
+    <script src="../Js-All/Login-Script.js"></script>
+</body>
+
+</html>

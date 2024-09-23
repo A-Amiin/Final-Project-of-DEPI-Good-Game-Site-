@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="../Images-All/4.svg" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../Bootstrap/css/bootstrap.rtl.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../Css-All/Signup-Styles.css">
+    <title>Create Account</title>
+</head>
+
+<body>
+    <div class="signup-container">
+        <!-- <div class="logo">G.G</div> -->
+        <div class="logo">
+            <img src="../Images-All/4.svg" alt="Logo">
+        </div>
+        <h1>Create Account</h1>
+        <p>Use your E-mail for registration</p>
+        <form id="signupForm">
+            <input type="text" class="form-control" id="fullName" placeholder="Full name" maxlength="50" required>
+            <div id="fullNameError" class="error-message">Full name should contain only alphabets, spaces, and be
+                between 12 and 50 characters!</div>
+
+            <input type="email" class="form-control" id="email" placeholder="E-mail" required>
+            <div id="emailError" class="error-message">Please enter a valid email address.</div>
+
+            <input type="password" class="form-control" id="password" placeholder="New Password" maxlength="25"
+                required>
+            <div id="passwordError" class="error-message">Password must be at least 8 characters, include a number, both
+                lower and uppercase letters, and a special character!</div>
+
+            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm New Password"
+                maxlength="25" required>
+            <div id="confirmPasswordError" class="error-message">Passwords do not match!</div>
+
+            <button type="submit" class="btn mt-3 enter">Sign
+                Up</button>
+        </form>
+
+        <!-- Anchor for Login -->
+        <div class="login-link">
+            <p>Already have an account? <a href="./Login-index.html">Login here</a>.</p>
+        </div>
+    </div>
+
+    <!-- Js files -->
+    <script src="../Bootstrap/js/bootstrap.min.js"></script>
+    <script src="../Bootstrap/js/popper.min.js"></script>
+    <script src="../Js-All/Signup-Script.js"></script>
+</body>
+
+</html>

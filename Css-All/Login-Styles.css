@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #101014;
+    font-family: jaro, sans-serif;
+    line-height: 1.6;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.logo {
+    margin-bottom: 0.9375rem;
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+}
+
+.card {
+    background-color: inherit;
+    border-radius: 0.75rem;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.75rem;
+    line-height: 4.725rem;
+    text-align: center;
+    margin-bottom: 1.875rem;
+}
+
+.form-control {
+    text-align: left;
+    border: none;
+    border-radius: 1.875rem;
+    background-color: #656569;
+    padding: 0.625rem;
+    margin-bottom: 0.9375rem;
+    font-size: 0.875rem;
+}
+
+.form-control::-webkit-input-placeholder {
+    color: #fff;
+}
+
+.form-control:focus::-webkit-input-placeholder {
+    color: #656569;
+}
+
+.btn {
+    background-color: #00bfff;
+    color: white;
+    letter-spacing: 0.08em;
+    text-align: center;
+    border: none;
+    width: 30%;
+    font-size: 1rem;
+    border-radius: 1.875rem;
+    margin: 0 0 3rem 0;
+}
+
+.signup-link {
+    font-family: Inter-Regular;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+a {
+    color: #00bfff;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    /* border: red 2px solid; */
+    margin-bottom: 15px;
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    display: none;
+}
