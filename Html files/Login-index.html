@@ -20,7 +20,6 @@
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-body">
-                        <!-- <div class="logo">G.G</div> -->
                         <div class="logo">
                             <img src="../Images-All/4.svg" alt="Logo">
                         </div>
@@ -28,20 +27,18 @@
                         <form id="loginForm">
                             <div class="form-group">
                                 <input type="email" class="form-control" id="email" placeholder="E-mail" required>
+                                <div id="emailError" class="error-message">Please enter your email.</div>
                             </div>
                             <div class="form-group">
                                 <input type="password" class="form-control" id="password" placeholder="Password"
                                     maxlength="25" required>
-
                                 <div id="passwordError" class="error-message">Incorrect password.</div>
                                 <div id="noAccount" class="error-message">No account found with this email. Please sign
                                     up to create an account.</div>
                             </div>
 
-                            <button type="submit" class="btn btn-praimary mt-3 enter"
-                                onclick="redirectToDashboard()">LOGIN</button>
+                            <button type="button" class="btn mt-3 enter" onclick="handleLogin()">LOGIN</button>
                         </form>
-                        <!-- Anchor for SignUp -->
                         <div class="signup-link">
                             Create New Account <a href="./Signup-index.html" class="signup-link-a">Sign Up</a>
                         </div>

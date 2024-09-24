@@ -1,4 +1,5 @@
-document.getElementById("signupForm").addEventListener("submit", function (event) {
+document.getElementById("signupButton").addEventListener("click", function (event) {
+    // Prevent the default action if you want to manage the validation
     event.preventDefault();
 
     let hasError = false;
@@ -8,6 +9,7 @@ document.getElementById("signupForm").addEventListener("submit", function (event
     const nameRegex = /^[A-Za-z\s]+$/;
     const fullNameError = document.getElementById("fullNameError");
 
+    console.log("Validating full name:", fullName);
     if (!nameRegex.test(fullName) || fullName.length < 12 || fullName.length > 50) {
         fullNameError.textContent = "Full name should only contain alphabets, spaces, and be between 12 and 50 characters!";
         fullNameError.style.display = "block";
@@ -20,6 +22,8 @@ document.getElementById("signupForm").addEventListener("submit", function (event
     const email = document.getElementById("email").value;
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     const emailError = document.getElementById("emailError");
+
+    console.log("Validating email:", email);
     if (!emailRegex.test(email)) {
         emailError.style.display = "block";
         hasError = true;
@@ -34,6 +38,7 @@ document.getElementById("signupForm").addEventListener("submit", function (event
     const passwordError = document.getElementById("passwordError");
     const confirmPasswordError = document.getElementById("confirmPasswordError");
 
+    console.log("Validating password:", password);
     // Password strength validation
     if (!passwordRegex.test(password)) {
         passwordError.textContent = "Password must be at least 8 characters, include a number, both lower and uppercase letters, and a special character!";
@@ -44,6 +49,7 @@ document.getElementById("signupForm").addEventListener("submit", function (event
     }
 
     // Confirm password matches
+    console.log("Confirming password:", confirmPassword);
     if (password !== confirmPassword) {
         confirmPasswordError.style.display = "block";
         hasError = true;
@@ -52,7 +58,9 @@ document.getElementById("signupForm").addEventListener("submit", function (event
     }
 
     // If any error exists, stop execution
-    if (hasError) return;
+    if (hasError) {
+        return;
+    }
 
     // Retrieve the existing users or create new one
     const users = JSON.parse(localStorage.getItem('users')) || [];
@@ -76,6 +84,5 @@ document.getElementById("signupForm").addEventListener("submit", function (event
 });
 
 function navigateToHome() {
-    // Directly navigate to the home page
     window.open('../Html files/Home-Index.html', '_self');
 }

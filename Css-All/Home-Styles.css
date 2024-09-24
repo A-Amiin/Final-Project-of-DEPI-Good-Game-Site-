@@ -45,8 +45,17 @@ video {
 }
 
 .videodo,
-#freeGamesSection {
+#freeGamesSection,
+.Copyright {
     position: relative;
+}
+
+.Copyright {
+    margin-top: 35px;
+}
+
+.Copyright p {
+    padding: 15px 0;
 }
 
 .videodo::after,
@@ -54,6 +63,16 @@ video {
     content: '';
     position: absolute;
     bottom: -30px;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+}
+
+.Copyright::after {
+    content: '';
+    position: absolute;
+    top: 0px;
     left: 0;
     height: 2px;
     width: 100%;

@@ -10,8 +10,14 @@
 </head>
 
 <body>
-    <h1>Connect 4 Game</h1>
-    <div id="player-switcher">Next Player: <span id="current-player">Red</span></div>
+    <h1 class="headd">Connect 4 Game</h1>
+    <div class="turn-container">
+        <h3 class="next">Next Player:</h3>
+        <div id="player-switcher">
+            <div id="player-red" class="player active">Red</div>
+            <div id="player-yellow" class="player">Yellow</div>
+        </div>
+    </div>
     <div id="board"></div>
     <div class="bottom"></div>
     <button id="reset">Reset Game</button>

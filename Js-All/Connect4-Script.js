@@ -1,12 +1,13 @@
 const board = document.getElementById('board');
 const resetButton = document.getElementById('reset');
-const currentPlayerDisplay = document.getElementById('current-player');
+const playerRed = document.getElementById('player-red');
+const playerYellow = document.getElementById('player-yellow');
 const columns = 7;
 const rows = 6;
 let currentPlayer = 'red';
 let grid = Array.from({ length: rows }, () => Array(columns).fill(null));
 
-// Create the game board
+// Initialize the game
 function createBoard() {
     board.innerHTML = ''; // Clear the board
     for (let row = 0; row < rows; row++) {
@@ -19,7 +20,7 @@ function createBoard() {
             board.appendChild(cell);
         }
     }
-    updatePlayerDisplay();
+    updatePlayerDisplay(); // Call to update player display initially
 }
 
 // Handle the cell click event
@@ -31,7 +32,7 @@ function handleCellClick(event) {
         const cell = document.querySelector(`.cell[data-row='${row}'][data-col='${col}']`);
         cell.classList.add(currentPlayer);
         if (checkWinner(row, col)) {
-            alert(`${currentPlayer} wins!`);
+            alert(`${currentPlayer.charAt(0).toUpperCase() + currentPlayer.slice(1)} wins!`);
             resetGame();
         } else {
             switchPlayer();
@@ -47,7 +48,18 @@ function switchPlayer() {
 
 // Update the player display
 function updatePlayerDisplay() {
-    currentPlayerDisplay.textContent = currentPlayer.charAt(0).toUpperCase() + currentPlayer.slice(1);
+    // Reset both players to transparent
+    playerRed.style.backgroundColor = 'transparent';
+    playerYellow.style.backgroundColor = 'transparent';
+
+    // Set active player color
+    if (currentPlayer === 'red') {
+        playerRed.classList.add('active');
+        playerRed.style.backgroundColor = '#ff0000'; // Color for active player
+    } else {
+        playerYellow.classList.add('active');
+        playerYellow.style.backgroundColor = '#ff0'; // Color for active player
+    }
 }
 
 // Find the first available row in the selected column

@@ -5,6 +5,58 @@ body {
     align-items: center;
     height: 100vh;
     background-color: #1e1e1e;
+    margin: 0;
+}
+
+.headd {
+    font-style: italic;
+    background-color: #4294ff;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 50px;
+    color: white;
+}
+
+.next {
+    color: white;
+    text-align: center;
+    font-size: 22px;
+}
+
+#player-switcher {
+    position: relative;
+    font-size: 30px;
+    width: 200px;
+    font-weight: 600;
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 5px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 3px white solid;
+}
+
+.player {
+    width: 85px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+    background-color: transparent;
+    /* Start transparent */
+}
+
+.player.active {
+    background-color: #ff7f7f;
+    /* Color for active player */
+}
+
+.player:not(.active) {
+    background-color: transparent;
+    /* Inactive player remains transparent */
 }
 
 #board {
@@ -15,25 +67,6 @@ body {
     background-color: #4294ff;
     border: 20px solid #4294ff;
     border-radius: 20px 20px 0px 0px;
-}
-
-h1 {
-    font-style: italic;
-    background-color: #4294ff;
-    border-radius: 10px;
-    padding: 5px;
-    margin-top: 50px;
-    color: white;
-}
-
-#player-switcher {
-    font-size: 30px;
-    font-style: oblique;
-    font-weight: 600;
-    background-color: #4294ff;
-    border-radius: 10px;
-    padding: 5px;
-    color: white;
 }
 
 .cell {
@@ -74,4 +107,64 @@ button {
     background-color: #4294ff;
     color: white;
     font-size: large;
+}
+
+@media (max-width: 768px) {
+    #board {
+        grid-template-columns: repeat(7, 45px);
+        grid-gap: 8px;
+        border: 15px solid #4294ff;
+    }
+
+    .cell {
+        width: 45px;
+        height: 43px;
+    }
+
+    .bottom {
+        width: 500px;
+        height: 25px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    #player-switcher {
+        font-size: 24px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    #board {
+        grid-template-columns: repeat(7, 35px);
+        grid-gap: 6px;
+        border: 10px solid #4294ff;
+    }
+
+    .cell {
+        width: 35px;
+        height: 33px;
+    }
+
+    .bottom {
+        width: 350px;
+        height: 20px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    #player-switcher {
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 12px;
+    }
 }
