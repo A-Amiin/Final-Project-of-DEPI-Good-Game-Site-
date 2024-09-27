@@ -17,21 +17,6 @@ filterSelect.addEventListener('change', () => {
   }
 });
 
-// document.querySelectorAll('.play-game-btn').forEach(button => {
-//   button.addEventListener('click', function () {
-//     const gameUrl = this.getAttribute('data-url');
-//     window.open(gameUrl, '_blank');
-//   });
-// });
-
-// document.querySelectorAll('.play-game-btn').forEach(button => {
-//   button.addEventListener('click', function () {
-//     const gameUrl = this.getAttribute('data-url');
-//     window.open(gameUrl, '_blank');
-//   });
-// });
-
-
 document.querySelectorAll('.game-image-container').forEach(container => {
   const button = container.querySelector('.play-game-btn');
   const overlay = container.querySelector('.overlay');
@@ -48,6 +33,7 @@ document.querySelectorAll('.game-image-container').forEach(container => {
     overlay.style.display = 'none';
   });
 });
+
 const gameImages = document.querySelectorAll('.game-image');
 gameImages.forEach(img => {
   const gameInfoOverlay = img.querySelector('.game-info');

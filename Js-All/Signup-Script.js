@@ -23,7 +23,6 @@ document.getElementById("signupButton").addEventListener("click", function (even
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     const emailError = document.getElementById("emailError");
 
-    console.log("Validating email:", email);
     if (!emailRegex.test(email)) {
         emailError.style.display = "block";
         hasError = true;
